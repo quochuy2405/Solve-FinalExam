@@ -1,0 +1,29 @@
+﻿@model IQueryable<Nvbt>
+
+<table border="1">
+    <tr>
+        <td>Mã Thiết Bị</td>
+        <td>Mã Căn Hộ</td>
+        <td>Lần Thứ</td>
+        <td>Ngày Bảo Trì</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MaThietBi</td>
+            <td>@item.MaCanHo</td>
+            <td>@item.LanThu</td>
+            <td>@item.NgayBaoTri</td>
+            <td>
+                <a href="/NhanVien/ViewBT?matb=@item.MaThietBi&&mach=@item.MaCanHo&&lanthu=@item.LanThu">
+                    View
+                </a><a href="/NhanVien/XoaBT?matb=@item.MaThietBi">Delete</a>
+            </td>
+        </tr>
+
+    }
+
+
+</table>
+

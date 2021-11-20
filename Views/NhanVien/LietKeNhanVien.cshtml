@@ -1,0 +1,18 @@
+﻿@model IQueryable<Nhanvien>
+    <h1>@TempData["status"]</h1>
+<form action="/NhanVien/DanhSachBaoTri" method="post">
+    <span>Tên Nhân Viên :</span>
+    <select name="manv">
+
+        @foreach (var item in Model)
+        {
+            <option value="@item.MaNhanVien">
+                @item.TenNhanVien
+            </option>
+        }
+
+
+
+    </select></br>
+    <input value="Liệt Kê" type="submit" />
+</form>

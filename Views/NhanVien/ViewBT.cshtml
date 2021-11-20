@@ -1,0 +1,36 @@
+﻿@model IQueryable<Nvbt>
+
+<form action="/NhanVien/UpdateBT" method="post">
+    <table border="1">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>Mã Nhân Viên  :</td>
+                <td> <input name="MaNhanVien" value="@item.MaNhanVien" type="text" readonly /></td>
+            </tr>
+            <tr>
+                <td>Mã Thiết Bị  :</td>
+                <td> <input name="MaThietBi" value="@item.MaThietBi" type="text" readonly /></td>
+            </tr>
+
+            <tr>
+                <td>Mã Căn Hộ :</td>
+                <td> <input name="MaCanHo" value="@item.MaCanHo" type="text" readonly/></td>
+            </tr>
+            <tr>
+                <td>Lần sửa :</td>
+                <td> <input name="LanThu" value="@item.LanThu" type="text" readonly /></td>
+            </tr>
+            <tr>
+                <td>Ngày Sửa :</td>
+                <td> <input name="NgayBaoTri" value="@item.NgayBaoTri" type="text" /></td>
+            </tr>
+
+        }
+
+
+    </table>
+
+    <input value="Update" type="submit" />
+
+</form>
